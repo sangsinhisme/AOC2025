@@ -39,7 +39,6 @@ func ReadInput(day int) []string {
 
 	// Add the session cookie to the request
 	req.Header.Set("cookie", fmt.Sprintf("%s", sessionToken))
-
 	client := &http.Client{}
 	resp, err := client.Do(req)
 	if err != nil {
@@ -72,7 +71,7 @@ func ReadInput(day int) []string {
 	}
 
 	fmt.Println("Request successful!")
-	err = WriteToFile(fmt.Sprintf("Input/%v.txt", day), lines)
+	err = WriteToFile(fmt.Sprintf("Input/Day%v.txt", day), lines)
 	if err != nil {
 		fmt.Println("Error writing to file:", err)
 	} else {

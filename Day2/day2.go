@@ -38,12 +38,12 @@ func helper(input string) bool {
 func Part1(submit bool) {
 	lines, err := Utils.ReadFileLines(fmt.Sprintf("Day%v/sample.txt", day))
 	if submit {
-		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/%v.txt", day))
+		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/Day%v.txt", day))
 		if err != nil {
 			fmt.Println("Input not already fetch today")
 			Utils.ReadInput(day)
 		}
-		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/%v.txt", day))
+		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/Day%v.txt", day))
 	}
 	lines = strings.Split(lines[0], ",")
 	ans := 0
@@ -72,12 +72,12 @@ func Part1(submit bool) {
 func Part2(submit bool) {
 	lines, err := Utils.ReadFileLines(fmt.Sprintf("Day%v/sample.txt", day))
 	if submit {
-		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/%v.txt", day))
+		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/Day%v.txt", day))
 		if err != nil {
 			fmt.Println("Input not already fetch today")
 			Utils.ReadInput(day)
 		}
-		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/%v.txt", day))
+		lines, err = Utils.ReadFileLines(fmt.Sprintf("Input/Day%v.txt", day))
 	}
 	lines = strings.Split(lines[0], ",")
 	ans := 0
