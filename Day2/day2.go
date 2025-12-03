@@ -7,6 +7,9 @@ import (
 	"strings"
 )
 
+/*
+--- Day 2: Gift Shop ---
+*/
 const day = 2
 
 func helper(input string) bool {
