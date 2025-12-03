@@ -6,6 +6,9 @@ import (
 	"strconv"
 )
 
+/*
+--- Day 1: Secret Entrance ---
+*/
 const day = 1
 
 func Part1(submit bool) {
