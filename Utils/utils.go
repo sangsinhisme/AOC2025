@@ -127,13 +127,13 @@ func ReadFileLines(filename string) ([]string, error) {
 	return lines, nil
 }
 
-func Submit(day, level, ans int) {
+func SubmitString(day, level int, ans string) {
 	sessionToken := Config.GetConfiguration().AdventSession
 	urlAdvent := fmt.Sprintf("%s/%d/day/%d/answer", adventDomain, year, day)
 
 	formData := url.Values{}
 	formData.Set("level", strconv.Itoa(level))
-	formData.Set("answer", strconv.Itoa(ans))
+	formData.Set("answer", ans)
 
 	req, err := http.NewRequest("POST", urlAdvent, bytes.NewBufferString(formData.Encode()))
 	if err != nil {
@@ -184,6 +184,10 @@ func Submit(day, level, ans int) {
 	} else {
 		fmt.Printf("Request failed with status: %s\n", resp.Status)
 	}
+}
+
+func Submit(day, level, ans int) {
+	SubmitString(day, level, strconv.Itoa(ans))
 }
 
 func Abs(i, j int) int {
