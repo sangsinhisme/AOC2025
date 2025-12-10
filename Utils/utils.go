@@ -213,3 +213,8 @@ func Pow10(exp int) int {
 	}
 	return result
 }
+
+func StringToInt64(str string) int64 {
+	result, _ := strconv.ParseInt(str, 10, 64)
+	return result
+}
